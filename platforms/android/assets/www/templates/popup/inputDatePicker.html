@@ -1,0 +1,7 @@
+<script type="text/ng-template" id="inputDatePicker.html">
+  <ion-item class="item-icon-right">
+    <i ng-click="to.onclick(model,options)" 
+       class="icon ion-ios-calendar-outline"></i>
+    {{ model[options.key] | date : to.dateFormat }}
+  </ion-item>
+</script>

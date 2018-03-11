@@ -1,0 +1,63 @@
+
+1) ¿Dónde estás guardando las imágenes?
+R= la ruta de los avatar de usuario subidos desde el movil es: BAnight-movil/img/avatar
+
+2) ¿Cuál será la carpeta en el sistema operativo donde quedará el proyecto?
+R= /var/www/html/
+
+3) ¿Cómo se va a llamar el método cuando un usuario elimina de favoritos?
+R= eliminarFavori
+
+4)¿ Qué parámetros vas a enviarle al método del punto 3?
+R=
+
+5) ¿Qué JSON de respuestas necesitas cuando se ejecute el método del punto 3?
+R= 
+
+6) En el método LoginManual, ¿que formato quieres que retorne el método? {id:valor} o {valorid}
+R= {valorid}
+
+7)Voy a redondear el valor del review a un decimal?
+R= si, ejemplo = 3,4
+
+8) ¿En cuál método quieres regresar el valor del avatar? ¿Qué otros campos necesitas en el JSON de retorno? por favor especificar el JSON de retorno?
+R= 
+	1) reviews : (getReviewsEstablecimiento)
+	avatar del usuario que realizo el comentario y Numero total de calificaciones realizadas por usuario (basados en tanto)
+
+	2) GetHistorial (Cambiar atributo de nombre de usuario por el nombre del establecimiento , incluyeavatar del establecimiento)
+
+	3) Get Datos detallados de Usuario : getDetallesUser | idUser ò Nombre ò email | Todos los atributosposibles referente al usuario
+
+
+9) La llamada http://138.197.30.57:8888/api/v1/getreview/1/1  retorna un solo review asocidoa un usuario, por eso está en singular la palabra review y se trae el review del usuario en específico, si necesitas un método que retorne todoslos reviews (plural) por favor necesito lo siguiente: Nombre del método (sugiero getreviews) | variables que levas a pasar (sugiero idEstablecimiento) y JSON deretorno, especificar con detalles TODOS los campos que necesitas de retorno.
+R=   getreviews | idEstablecimiento | avatar del establecimiento, nombre de usuario,  comentario del usuario, fecha de comentario, valor del reviews del establecimiento, numero total en la cual esta basado la calificacion del establecimiento 
+
+10) ¿Cómo se va a manejar el atributo hora en elmétodo setReserva?
+R= 
+
+ 
+si necesitas cambios adicionales, recuerda enviarme en palabras lo que necesitas (no como hacerlo técnicamente) | el nombre del método | variables a pasar | JSON bien especificado con los campos que necesites de retorno
+
+
+
+resumen:
+
+eventos: 
+| getEventosPorDia | dia {1,2,3,4} | igual que establecimiento por DESTACADO ò TODOS
+
+Funcion de integrar envio de email automatico 
+
+Deletefavoritos | isUser, IdEstablecimiento | "SUCCESS": "ok" | "ERROR": "No se puede Eliminar Favorito"
+
+getEstablecimiento/1/2  (Solo funciona para el establecimiento nro 1)
+
+Login Maunual Retornar idUser
+
+reviews : (getReviewsEstablecimiento)
+avatar del usuario que realizo el comentario y Numero total de calificaciones realizadas por usuario (basados en tanto)
+
+GetHistorial (Cambiar atributo de nombre de usuario por el nombre del establecimiento)
+
+Get Datos detallados de Usuario:
+getDEtallesUser | idUser | todos los atributos de usuario

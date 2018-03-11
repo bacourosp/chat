@@ -1,0 +1,35 @@
+{
+   "destination_addresses" : [ "San Francisco, Californie, États-Unis", "Victoria, BC, Canada" ],
+   "origin_addresses" : [
+      "Polygonal Address System, Water St SW, Washington, DC 20024, États-Unis"
+   ],
+   "rows" : [
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "4 906 km",
+                  "value" : 4905536
+               },
+               "duration" : {
+                  "text" : "10 jours 19 heures",
+                  "value" : 931833
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : {
+                  "text" : "5 070 km",
+                  "value" : 5070232
+               },
+               "duration" : {
+                  "text" : "11 jours 2 heures",
+                  "value" : 957247
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

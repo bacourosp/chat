@@ -1,0 +1,68 @@
+<ion-view calss="favoritos-views" view-title="A dónde ir" hide-back-button="true">
+<ion-nav-bar class="bar-assertive" align-title="left">
+       <!-- <ion-nav-back-button ><i class="icon ion-ios-arrow-back"></i>
+        <span class=""><span class="default-title hide"></span><span class="previous-title hide"></span></span>
+            </ion-nav-back-button>-->
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-navicon" menu-toggle="left" style="color: #336699;"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon ion-android-search" id="menu-popover" ng-click="popover.show($event)" style="color: #336699;"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+    <ion-content class="fondo-img">            
+      
+
+             <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+            <a nav-transition="none" href="#/app/boliches"  class="tab-item active"> <i class="icon icono-boliche-azul"></i> Boliches </a> 
+            <a nav-transition="none" href="#/app/bares"  class="tab-item " style="color: #fff;"> <i class="icon icono-bares-blanco" ></i> Bares </a>             
+            <a nav-transition="none" href="#/app/hoteles"  class="tab-item" style="color: #fff;"> <i class="icon icono-hotel-blanco"></i> Hoteles </a> </div>  
+             </div>
+
+<!--ng-click="blinds();"
+ <div class="button-bar color-boton-destacados"> 
+ <a href="#/app/boliches" class="button color-boton-destacados active" ng-click="blinds();">DESTACADOS</a> 
+
+ </div>-->
+
+ <div class="destacados">  
+
+<ion-list>
+            <ion-item id="lista-destacados" class="list item item-thumbnail-left waves-effect" ng-repeat="establecimient in boliches.todos" ui-sref="app.establecimientos({ 
+          categoryId: establecimient.id, 
+          categoryTitle: establecimient.title,
+          categoryLogo: establecimient.avatar,
+          categoryFondo: establecimient.portada,          
+          categoryEtiquetas: establecimient.etiquetas,
+          categoryDescripcion: establecimient.descripcion,
+          categoryUbicacion: establecimient.ubicacion,
+          categoryLatitud: establecimient.latutid,
+          categoryLongitud: establecimient.longitud   })" back-img="{{establecimient.portada}}" >
+             
+              <img ng-src="{{establecimient.avatar}}">  
+              <div class="favoritos-box"> 
+
+              <rating id="rating_responsive" class="favoritos-box-right" ng-model="establecimient.reviews" max="5"></rating>
+
+              <p class="favoritos-box-left">{{establecimient.nombre}}</p>
+              <p>{{establecimient.etiquetas}}</p>
+              
+             </div>
+
+            </ion-item>           
+
+</ion-list> 
+</div>
+
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

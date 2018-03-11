@@ -1,0 +1,54 @@
+<ion-view hide-nav-bar="true" class="preregistro-titulo" cache-view="false">
+ <ion-content class="fondo_Layer_7">
+<div class="top-content row"> 
+      
+           <div class="row row-center">
+                <div class="col">
+                <i id="botonBack" class="ion-ios-arrow-back" ui-sref="login()"></i>
+                </br></br></br>
+                     <center><span class="titulo_piso1">ESTAS A 2 PASOS DE DISFRUTAR LA NOCHE</span></center>
+                </div>
+            </div>
+      </div>
+
+<!-- FORM ============================================================== -->
+    <!-- =================================================================== -->
+    
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+       
+       <!-- NAME -->
+<ion-md-input ng-class="{ 'has-error' : userForm.usuario.$invalid && !userForm.usuario.$pristine }" class="item_input color_input" id="usuario" name="usuario" label="Usuario" placeholder="Usuario" hightlight-color="energized" ng-model="usuario.value" ng-minlength="3" ng-maxlength="19" required></ion-md-input>
+      <p ng-show="userForm.usuario.$error.required" class="help-block">Campo Requerido.</p>
+      <p ng-show="userForm.usuario.$error.minlength" class="help-block">El nombre de usuario es demasiado corto.</p>
+      <p ng-show="userForm.usuario.$error.maxlength" class="help-block">El nombre de usuario es demasiado largo.</p>
+
+<!-- EMAIL -->
+<ion-md-input ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }" class="item_input color_input" id="email" name="email" label="Mail de registro" placeholder="Ingrese su mail" hightlight-color="energized" type="email" ng-model="email.value" required></ion-md-input>
+<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Introduzca un correo electronico valido.</p>
+
+<!-- password -->
+<ion-md-input ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }" class="item_input color_input" id="password" name="password" label="Contraseña" placeholder="Contraseña" hightlight-color="energized" type="password" ng-model="password.value" ng-keypress="botonEnter($event)" ng-minlength="3" required></ion-md-input> 
+      <p ng-show="userForm.password.$error.required" class="help-block">Campo Requerido.</p>
+      <p ng-show="userForm.password.$error.minlength" class="help-block">La contraseña de usuario es demasiado corta.</p>
+
+           <!-- <ion-md-input class="item_input color_input" id="usuario" name="usuario" label="Usuario" placeholder="Usuario" hightlight-color="energized" ng-model="usuario.value"></ion-md-input>
+    
+            <ion-md-input class="item_input color_input" id="email" name="email" label="Mail" placeholder="Mail" hightlight-color="dark" type="email" ng-model="email.value"></ion-md-input>
+
+            <ion-md-input class="item_input color_input" id="password" name="password" label="Contraseña" placeholder="Contraseña" hightlight-color="energized" type="password" ng-model="password.value" ng-keypress="botonEnter($event)"></ion-md-input>-->
+            
+
+   <!-- <div class="hide-on-keyboard-open"></div> -->
+       </br></br></br>
+      <center>
+      <button class="button button-block button-stable" ng-click="checkUser($event)" ng-disabled="userForm.$invalid" disabled>
+          Continuar
+        </button>
+         <br>
+        <p class="color_pasos">Paso 1 de 2</p> 
+         </center>       
+       
+    </form>
+  </ion-content>
+</ion-view>

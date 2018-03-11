@@ -1,0 +1,13 @@
+<ion-view title="{{navTitle}}" left-buttons="leftButtons">
+  <ion-content header-shrink scroll-event-interval="5">
+    <ion-list class="locations-list">
+      <ion-item class="location-item" ng-repeat="loc in locations | orderBy:sortLoc" type="item-text-wrap" href="#/location/{{loc.id}}/details">
+      <!--style="background-image:url('{{loc.photos.0.url}}');"-->
+        <div class="location-title">
+          <p>{{loc.name}}</p>
+          <span class="distance-indicator"><span class="digit">{{distanceFromHere(loc)}}</span><span class="unit">mi</span></span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

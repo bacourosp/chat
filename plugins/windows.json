@@ -1,0 +1,54 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1123677751073896",
+            "APP_NAME": "BAnight",
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-filepath": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "BAnight"
+        },
+        "cordova-plugin-actionsheet": {
+            "PACKAGE_NAME": "BAnight"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "BAnight"
+        }
+    }
+}

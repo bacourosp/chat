@@ -1,0 +1,80 @@
+<ion-view view-title="A dónde ir" hide-back-button="true">
+<ion-nav-bar class="bar-assertive" align-title="left">
+       <!-- <ion-nav-back-button ><i class="icon ion-ios-arrow-back"></i>
+        <span class=""><span class="default-title hide"></span><span class="previous-title hide"></span></span>
+            </ion-nav-back-button>-->
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-navicon" menu-toggle="left" style="color: #336699;"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon ion-android-search" id="menu-popover" ng-click="popover.show($event)" style="color: #336699;"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+    <ion-content class="fondo-img">            
+      
+ <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+            <a nav-transition="none" href="#/app/boliches"  class="tab-item" style="color: #fff;"> <i class="icon icono-boliche"></i> Boliches </a> 
+            <a nav-transition="none" href="#/app/bares" ng-click="getBaresTodos();getBaresDestacados()" class="tab-item active"> <i class="icon icono-bares-1"></i> Bares </a>             
+            <a nav-transition="none" href="#/app/hoteles"  class="tab-item" style="color: #fff;"> <i class="icon icono-hotel-blanco"></i> Hoteles </a> </div>  
+             </div>
+
+ <div class="button-bar color-boton-destacados"> 
+     <button nav-transition="slide" class="button color-boton-destacados" ng-click="ngShowhideFun(ngShowhide2)" ng-model="ngShowhide" ng-change="ngShowhide">DESTACADOS</button> 
+     <button nav-transition="none" class="button color-boton-destacados active" ng-click="ngShowhideFun2(ngShowhide)" ng-model="ngShowhide2" ng-change="ngShowhide2">TODOS</button>
+ </div>
+
+        <div ng-show="ngShowhide">
+            <div class="destacados">  
+              <ion-list>
+                <ion-item id="lista-destacados" class="list item item-thumbnail-left waves-effect" ng-repeat="favorito in bares.destacados" ui-sref="app.establecimientos({ 
+              categoryId: favorito.id, 
+              categoryTitle: favorito.title,
+              categoryLogo: favorito.avatar,
+              categoryFondo: favorito.portada,          
+              categoryEtiquetas: favorito.etiquetas,
+              categoryDescripcion: favorito.descripcion,
+              categoryUbicacion: favorito.ubicacion,
+              categoryLatitud: favorito.latutid,
+              categoryLongitud: favorito.longitud   })" back-img="{{favorito.portada}}" >
+                 
+                  <img ng-src="{{favorito.avatar}}">  
+                  <div class="favoritos-box"> 
+                      <rating id="rating_responsive" class="favoritos-box-right" ng-model="favorito.reviews" max="5"></rating>
+
+                      <p class="favoritos-box-left">{{favorito.nombre}}</p>
+                      <p>{{favorito.etiquetas}}</p>                  
+                 </div>
+                </ion-item>           
+                </ion-list>
+            </div>
+        </div>
+
+          <div ng-show="ngShowhide2">
+            <div class="destacados">
+                    <ion-list>
+                    <ion-item class="item item-thumbnail-left waves-effect" ng-repeat="favorito in bares.todos" ui-sref="app.establecimientos({ 
+                  categoryId: favorito.id, 
+                  categoryTitle: favorito.title,
+                  categoryLogo: favorito.avatar,
+                  categoryFondo: favorito.portada,          
+                  categoryEtiquetas: favorito.etiquetas,
+                  categoryDescripcion: favorito.descripcion,
+                  categoryUbicacion: favorito.ubicacion,
+                  categoryLatitud: favorito.latutid,
+                  categoryLongitud: favorito.longitud   })">
+                      <img ng-src="{{favorito.avatar}}">  
+                      <div class="favoritos-box"> 
+                        <rating id="rating_responsive" class="favoritos-box-right" ng-model="favorito.reviews" max="5"></rating>
+
+                        <p class="favoritos-box-left">{{favorito.nombre}}</p>
+                        <p>{{favorito.etiquetas}}</p>              
+                      </div>
+                  </ion-item> 
+                  </ion-list>
+            </div>
+        </div> 
+    </ion-content>
+</ion-view>

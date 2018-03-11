@@ -1,0 +1,226 @@
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+    <title>Tabs Example</title>
+
+    <link href="//code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+  </head>
+
+  <body ng-controller="main">
+    
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c"></ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+    <script id="templates/tabs.html" type="text/ng-template">
+        
+        <ion-tabs class="tabs-icon-top tabs-positive">
+
+            <ion-tab title="Home" icon="ion-home" ui-sref="tabs.home">
+                <ion-nav-view name="home-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="About" icon="ion-ios7-information" ui-sref="tabs.about.page1">
+                <ion-nav-view name="about-tab" ></ion-nav-view>
+            </ion-tab>
+
+        </ion-tabs>
+      
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+        
+        <ion-view title="Home">
+            <ion-content class="padding">
+               Please check about tab
+            </ion-content>
+        </ion-view>
+        
+    </script>
+
+    <script id="templates/about.html" type="text/ng-template">
+        
+        <ion-view title="About">
+          
+       
+          <ui-view name="about-page"></ui-view>
+            
+        </ion-view>
+        
+    </script>
+    
+    <script id="templates/about-page1.html" type="text/ng-template">
+        
+        <ion-view title="Page 1">
+  <div class="tabs-striped tabs-top tabs-background-light tabs-color-assertive">
+      <div class="tabs">
+   <a class="tab-item tab-item-active" ui-sref="tabs.about.page1">
+     Page 1
+      </a>
+      <a class="tab-item" ui-sref="tabs.about.page2">
+     Page 2
+      </a>
+       <a class="tab-item" ui-sref="tabs.about.page3">
+     Page 3
+      </a>  
+       <a class="tab-item" ui-sref="tabs.about.page4">
+Page 4      </a>
+       <a class="tab-item" ui-sref="tabs.about.page5">
+     Page 5
+      </a>
+       <a class="tab-item" ui-sref="tabs.about.page6">
+     Page 6
+      </a>            
+      </div>
+   </div>
+   <ion-content on-swipe-left="onSwipeLeft()" class="padding has-tabs-top">
+     <p> Page 1</p>
+   </ion-content>
+ </ion-view>
+        
+    </script>
+    
+    <script id="templates/about-page2.html" type="text/ng-template">
+        
+        <ion-view title="Page 2">
+  <div class="tabs-striped tabs-top tabs-background-light tabs-color-assertive">
+      <div class="tabs">
+   <a class="tab-item" ui-sref="tabs.about.page1">
+     Page 1
+      </a>
+      <a class="tab-item tab-item-active" ui-sref="tabs.about.page2">
+     Page 2
+      </a>
+       <a class="tab-item" ui-sref="tabs.about.page3">
+     Page 3
+      </a>  
+       <a class="tab-item" ui-sref="tabs.about.page4">
+Page 4      </a>
+       <a class="tab-item" ui-sref="tabs.about.page5">
+     Page 5
+      </a>
+       <a class="tab-item" ui-sref="tabs.about.page6">
+     Page 6
+      </a>            
+      </div>
+   </div>
+   <ion-content class="padding has-tabs-top">
+     <p> Page 2</p>
+   </ion-content>
+ </ion-view>
+        
+    </script>
+
+  </body>
+</html
+
+angular.module('ionicApp', ['ionic'])
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+    
+    .state('tabs', {
+        url: "/tab",
+        abstract: true,
+        templateUrl: "templates/tabs.html"
+    })
+    
+    .state('tabs.home', {
+        url: "/home",
+        views: {
+            'home-tab': {
+                templateUrl: "templates/home.html",
+            }
+        }
+    })
+    
+    .state('tabs.about', {
+        url: "/about",
+        abstract: true,
+        views: {
+            'about-tab': {
+                templateUrl: "templates/about.html"
+            }
+        }
+    })
+    
+    .state('tabs.about.page1', {
+        url: "/page1",
+        views: {
+            'about-page': {
+                templateUrl: "templates/about-page1.html"
+            }
+        }
+    })
+    
+    .state('tabs.about.page2', {
+        url: "/page2",
+        views: {
+            'about-page': {
+                templateUrl: "templates/about-page2.html"
+            }
+        }
+    });
+
+    $urlRouterProvider.otherwise("/tab/home");
+
+})
+.controller('main', function($scope, $state){
+  
+  $scope.onSwipeLeft = function(){
+    $state.go('tabs.about.page2')
+  };
+  
+})
+.Background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1364px;
+  z-index: 8;
+}
+.Triangle {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.102;
+  position: absolute;
+  left: 0px;
+  top: 68px;
+  width: 750px;
+  height: 751px;
+  z-index: 7;
+}
+.Bottom_Box {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.102;
+  position: absolute;
+  left: 0px;
+  top: 819px;
+  width: 750px;
+  height: 1664px;
+  z-index: 6;
+}
+.Rectángulo_4 {
+  background-color: rgb(47, 126, 199);
+  position: absolute;
+  left: -102px;
+  top: 236px;
+  width: 968px;
+  height: 1189px;
+  z-index: 5;
+}
+.Background {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  width: 750px;
+  height: 2462px;
+  z-index: 4;
+}

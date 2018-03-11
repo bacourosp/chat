@@ -1,0 +1,7 @@
+ <ion-view view-title="Multiple dynamic tabs, scrollable">
+            <ion-content scroll="false">
+                <ion-slides slider="slider" ion-slides-tabs slide-tabs-scrollable="true">
+                    <ion-slide-page ng-repeat="eachTab in tabsArray track by $index" ion-slide-tab-label="{{eachTab.title}}" ng-bind-html="eachTab.content"></ion-slide-page>
+                </ion-slides>
+            </ion-content>
+        </ion-view>

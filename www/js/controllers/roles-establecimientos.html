@@ -1,0 +1,131 @@
+<ion-view view-title="A dónde ir">
+<ion-nav-bar class="bar-assertive" align-title="center">
+        <ion-nav-back-button hide-back-button="true">
+        <i class="icon ion-ios-arrow-back"></i>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color: #336699;"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-search" id="menu-popover" ng-click="popover.show($event)" style="color: #336699;"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+    <ion-content class="fondo-img">  
+
+            <my-tabs>
+<my-tab title="BOLICHES">     
+<div class="button-bar color-boton-destacados"> 
+ <a nav-transition="none" class="button color-boton-destacados active" ng-click="showCategorias();">DESTACADOS</a> 
+ <a nav-transition="none" class="button color-boton-destacados" ng-click="showCategorias();">TODOS</a>
+
+ </div>
+<div ng-switch="showCategorias()">
+    <div ng-switch-when="{data.destacados==no}">
+      <div class="destacados">
+<ion-list>
+            <ion-item class="item item-thumbnail-left waves-effect" ng-repeat="category in feeds_categories" ng-click="blinds();" ui-sref="app.establecimientos()">
+              <img ng-src="{{ category.logo }}">
+              <h2>{{ category.title }}</h2>
+              <p>{{ category.etiquetas }}</p>
+              <i class="icon ion-arrow-right-c"></i>
+             <div class="divider"></div>
+
+            </ion-item>           
+
+</ion-list>
+</div>
+    </div>
+    <div ng-switch-default>
+      <div class="destacados">       
+  <div class="list condensed-space no-padding done done done done">
+      <div class="card dark-bg in" style="-webkit-transition: 0.13s; transition: 0.13s;" ng-repeat="category in feeds_categories" item="space">
+          <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse"
+          ui-sref="app.establecimientos()">  
+             
+              <img src="{{category.fondo}}">
+               <div class="estilo-logo">
+              <img src="{{category.logo}}">
+
+              </div>
+               <span class="estilo-titulo">{{category.title}}</span>
+              <span class="estilo-etiquetas">{{category.etiquetas}}</span>
+              <ionic-ratings class="calificaciones banner_right" ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+          </a>
+      </div>
+  </div>  
+</div>
+ 
+    </div>
+  </div>       
+    
+     
+  
+ 
+  
+</my-tab>
+<my-tab title="BENEFICIOS">
+
+
+ 
+
+</my-tab>
+<my-tab title="UBICA">
+  <!--<div ng-bind-html="trustedHtml" class="col-md-4 map">-->
+  <span>{{ubicacion}}</span>
+ 
+ 
+
+</my-tab>
+</my-tabs>    
+
+      <!--  <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+            <a nav-transition="none" href="#/app/boliches"  class="tab-item" style="color: #fff;"> <i class="icon icono-boliche"></i> Boliches </a> 
+            <a nav-transition="none" href="#/app/bares-destacados"  class="tab-item active"> <i class="icon icono-bares-1"></i> Bares </a>             
+            <a nav-transition="none" href="#/app/hoteles-destacados"  class="tab-item" style="color: #fff;"> <i class="icon icono-hotel-blanco"></i> Hoteles </a> </div>  
+             </div>
+ng-click="blinds();"
+
+ <div class="button-bar color-boton-destacados"> 
+ <a nav-transition="none" href="#/app/bares-destacados" class="button color-boton-destacados active" ng-click="blinds();">DESTACADOS</a> 
+ <a nav-transition="none" href="#/app/bares-todos" class="button color-boton-destacados" ng-click="blinds();">TODOS</a>
+
+ </div>
+
+ <div class="destacados">       
+ 	<div class="list condensed-space no-padding done done done done">
+      <div class="card dark-bg in" style="-webkit-transition: 0.13s; transition: 0.13s;" ng-repeat="category in feeds_categories" item="space">
+          <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse"
+          ui-sref="app.establecimientos({ 
+          categoryId: category.id, 
+          categoryTitle: category.title,
+          categoryLogo: category.logo,
+          categoryFondo: category.fondo,          
+          categoryEtiquetas: category.etiquetas,
+          categoryDescripcion: category.descripcion,
+          categoryUbicacion: category.ubicacion,
+          categoryLatitud: category.latutid,
+          categoryLongitud: category.longitud })">  
+             
+              <img src="{{category.fondo}}">
+               <div class="estilo-logo">
+              <img src="{{category.logo}}">
+
+              </div>
+               <span class="estilo-titulo">{{category.title}}</span>
+              <span class="estilo-etiquetas">{{category.etiquetas}}</span>
+              <ionic-ratings class="calificaciones banner_right" ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+          </a>
+      </div>
+  </div>  
+</div>
+
+
+
+        <br />
+        <br />
+        <br />
+        <br /> -->
+    </ion-content>
+</ion-view>

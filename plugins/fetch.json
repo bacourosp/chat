@@ -1,0 +1,119 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1.3.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@2.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@4.0.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jeduan/cordova-plugin-facebook4.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1123677751073896",
+            "APP_NAME": "BAnight"
+        }
+    },
+    "cordova-plugin-datepicker": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file-transfer": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file-transfer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-filepath": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-filepath"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-camera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-actionsheet": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-actionsheet"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

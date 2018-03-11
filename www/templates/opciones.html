@@ -1,0 +1,46 @@
+<ion-view view-title="Opciones" >
+
+    <ion-content class="fondo-img" scroll="false">
+ 
+      <div class="top-content row"> 
+      
+           <div class="row">
+                <div class="col">  
+
+               <!--  <div class="main_photo">
+                      <img src="../img/fondos/fondo-2.png" style="    border-radius: 50%;">
+                      <img class="inlay" src="https://www.rit.edu/news/lib/views/public/images/dateline_images/facebook_icon.gif">
+                  </div>      -->            
+                    
+                    <center id="circulo_borde">
+                      <img 
+                      class="avatar_registro" 
+                      ng-src="{{pathForImage(image)}}" 
+                      ng-click="loadImage()">
+                       </center>                       
+                 
+             </div>
+            </div>
+      </div>
+       
+      <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a id="color_boton_opciones" class="login button button-block button-stable" ng-click="loadImage()">
+          CAMBIAR FOTO DE PERFIL
+        </a></center>  </div>
+    </div>
+     
+
+    
+      <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a id="color_boton_opciones" class="login button button-block button-stable" ui-sref="app.actualizar_clave()">
+          CAMBIAR CONTRASEÑA
+        </a></center>  </div>
+    </div>
+     
+
+    </ion-content>
+</ion-view>

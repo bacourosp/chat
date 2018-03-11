@@ -1,0 +1,205 @@
+<ion-view view-title="Perfil: {{title}}">
+
+<ion-content class="fondo-img">
+
+ <div class="destacados">       
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img ng-src="{{logo}}">
+    <h2>{{title}}</h2>
+    <span>{{etiquetas}}</span></br>
+     <a class=" button button-stable " ui-sref="auth.login" style="min-height: 10px;">Reservar</a>
+
+  </div>
+
+
+<div class="row">
+  <div class="col">
+    <i class="icon ion-star">
+    <span>4,3</span><br>
+    <span>Reviews</span></i>
+    
+  </div>
+  <div class="col">
+    <i class="icon ion-funnel">
+    <span>22-30</span><br>
+    <span>Edad</span></i>
+  </div>
+  <div class="col">
+     <i class="icon ion-location">
+    <span>{{distancia}}km</span><br>
+    <p>De tu Ubicíón</p></i>
+   </div>
+</div>
+
+<div class="item item-image">
+    <a ui-sref="app.galerias({ 
+          categoryId: ide, 
+          categoryTitle: title,
+          categoryLogo: logo,
+          categoryEtiquetas: etiquetas })">
+    <img ng-src="img/img1.jpg" >
+    </a>
+  </div>
+
+<!--  <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-royal tabs-icon-left"> 
+
+            <a class="tab-item active" ng-click="blinds();" href="#"> 
+            <i class="icon icon-info">           
+            </i>
+            </a> 
+
+            <a class="tab-item"> 
+            <i class="icon icon-tragos">              
+            </i>
+            </a> 
+
+            <a class="tab-item "> 
+            <i class="icon icon-mapa">              
+            </i>
+            </a>
+
+            </div>
+        </div> -->
+
+        <!-- SECCION DE PESTAÑAS Y MAPA-->
+
+        <my-tabs>
+<my-tab title="INFORMACION">
+            
+    
+<center>
+  <ul>
+    <li>Buena Música, Plastos exclusivos, tragos, diversión y un estilo único.</li>
+    <li>______</li>
+  </ul></center>
+<br>
+   <div class="row">
+  <div class="col ">
+    <i class="icon ion-clipboard">
+      <span>Listas</span>
+    </i>
+  </div>
+  <div class="col col-67">
+  <span>Armá tu lista con BA Night y disfrutá de los beneficios!</span>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col">
+    <i class="icon ion-clock">
+      <span> Abierto</span>
+    </i>
+  </div>
+  <div class="col col-67">
+  <span>Jué-Sab</span><br>
+  <span>20:30-05:30 hs </span>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col">
+    <i class="icon ion-social-usd">
+      <span> Forma de Pago</span>
+    </i>
+  </div>
+  <div class="col col-67">
+  <i class="icon ion-card"></i>
+  <i class="icon ion-cash"></i>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col">
+    <i class="icon ion-merge">
+      <span> Redes</span>
+    </i>
+  </div>
+  <div class="col col-67">
+    <i class="icon ion-social-facebook"></i>
+  <i class="icon ion-social-twitter"></i>
+  <i class="icon ion-social-instagram-outline"></i>
+  <i class="icon ion-social-snapchat-outline"></i>
+  </div>
+</div>
+
+<ion-item>
+      <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a class="login button button-block button-stable" ui-sref="app.map">
+          RESERVACION
+        </a></center>  </div>
+    </div>
+    </ion-item>
+     
+  
+ 
+  
+</my-tab>
+<my-tab title="BENEFICIOS">
+<center>
+  <ul>
+    <li>Encontrá tragos de autor y cervezas de todo tipo. Si hacés lista con BA Night te damos un voucher válido por:</li>
+    <li>______</li><br>
+    <li>Torta de cumpleaños</li>
+    <li>______</li><br>
+    <li>Tragos a elección</li>
+    <li>______</li><br>
+    <li>Latas HEINEKEN</li>
+    <li>______</li><br>
+    <li>Pizza Libre hasta la 1am</li>
+    <li>______</li><br>
+  </ul></center>
+
+<ion-item>
+      <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a class="login button button-block button-stable" ui-sref="app.map">
+          RESERVAR
+        </a></center> </div>
+    </div>
+    </ion-item>
+
+
+
+
+</my-tab>
+<my-tab title="UBICACIÓN">
+  <!--<div ng-bind-html="trustedHtml" class="col-md-4 map">-->
+  <span>{{ubicacion}}</span>
+ 
+ <iframe
+    width="100%"
+    height="350"
+    frameborder="0" style="border:0"
+    ng-src="{{mapaUrl}}">
+  </iframe>
+ 
+
+<ion-item>
+      <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a class="login button button-block button-stable" ui-sref="app.como-llegar">
+          CÓMO LLEGAR
+        </a></center>
+        </div>
+    </div>
+    </ion-item>
+
+</my-tab>
+</my-tabs>
+
+ 
+
+</div>
+</div>
+
+</ion-content>
+
+</ion-view>

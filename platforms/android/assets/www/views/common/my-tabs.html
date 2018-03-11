@@ -1,0 +1,16 @@
+
+		 <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+
+            <a ng-repeat="tab in tabs" class="tab-item" ng-click="select(tab)" ng-class="{ active: tab.selected }"> 
+            		<i ng-class="tab.title=='INFORMACION' && 'icon-info' || 'icon-tragos'
+            						&& tab.title=='BENEFICIOS' && 'icon-tragos' || 'icon-tragos'
+            						&& tab.title=='UBICA' && 'icon-mapa' || 'icon-tragos'" class="icon"> 
+ 			</a> 
+			</div>
+        </div>
+	<!--</div>
+</div>-->
+<div class="item item-body">
+	<div class="tabs-content" ng-transclude></div>
+</div>

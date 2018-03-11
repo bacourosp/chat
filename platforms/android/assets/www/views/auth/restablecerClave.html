@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="true" class="loginManual-titulos" cache-view="false">
+  <ion-content scroll="false" class="fondo-login">
+    <div class="top-content row">
+           <!--Espacios em Blancos Hacia Abajo-->
+           <i id="botonBack" class="ion-ios-arrow-back" ui-sref="login()"></i>
+      </div>
+     
+<!-- FORM ============================================================== -->
+    <!-- =================================================================== -->
+    
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+            <ion-md-input ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }" class="item_input color_input" id="email" name="email" label="Mail de registro" placeholder="Ingrese su mail" hightlight-color="energized" type="email" ng-model="email.value" required></ion-md-input>
+<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Introduzca un correo electronico valido.</p>
+             
+
+        
+
+    <div  id="footer" class="bottom-content row hide-on-keyboard-open ">
+      <div class="col col-center">
+      <center>
+      <button type="submit" class="login button button-block button-stable" ng-disabled="userForm.$invalid" disabled>
+               Restablecer contraseña     
+        </button>
+        
+         </center>       
+      </div>
+    </div>
+
+
+     </form>
+  </ion-content>
+</ion-view>

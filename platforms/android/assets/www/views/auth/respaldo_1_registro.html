@@ -1,0 +1,49 @@
+<ion-view hide-nav-bar="true" class="walkthrough-view" cache-view="false">
+  <ion-content class="fondo_Layer_7">
+      <div class="top-content row">
+           <div class="row row-center">
+                <div class="col">  
+                     <div id="circulo_borde">
+                      <img 
+                      class="avatar_registro" 
+                      ng-src="{{pathForImage(image)}}" 
+                      ng-click="loadImage()">
+                       </div>
+                </div>
+            </div>
+      </div>
+
+
+
+     <!--   <form action="POST" ng-submit="uploadImage()" >ng-click="showDatePicker()" -->
+    
+            <ion-md-input ng-click="loadSexo()" class="item_input" label="Sexo" placeholder="Sexo" hightlight-color="dark"></ion-md-input>
+
+            <ion-md-input class="item_input" label="Fecha" placeholder="Fecha de Naciomiento" hightlight-color="energized" type="date"></ion-md-input>
+            
+      <!--      <input class="login button button-block button-stable" type="submit" name="uploadImage" value="Submit to server">                    
+                
+        </form>-->
+
+
+
+
+
+<!--Footer-->
+
+
+    <div class="bottom-content row">
+      <div class="col col-center">
+      <center>
+      <a class="login button button-block button-stable" ui-sref="app.bares-todos()">
+          Continuar con Facebook
+        </a>
+         <br>
+        <a class="mi-cuenta" ui-sref="app.bares-todos">Iniciar sesión con mi cuenta</a>  <br>
+        <img ng-src="img/botones/Forma-1.png"><br>
+        <a class="mi-cuenta" ui-sref="app.bares-todos">¿No tenés una cuenta? Registrate</a> 
+         </center>       
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

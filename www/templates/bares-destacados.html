@@ -1,0 +1,66 @@
+<ion-view view-title="A dónde ir" hide-back-button="true">
+<ion-nav-bar class="bar-assertive" align-title="center">
+        <ion-nav-back-button>
+        <i class="icon ion-ios-arrow-back"></i>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color: #336699;"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-search" id="menu-popover" ng-click="popover.show($event)" style="color: #336699;"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+    <ion-content class="fondo-img">      
+
+       <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+            <a nav-transition="none" href="#/app/boliches"  class="tab-item" style="color: #fff;"> <i class="icon icono-boliche"></i> Boliches </a> 
+            <a nav-transition="none" href="#/app/bares-destacados"  class="tab-item active"> <i class="icon icono-bares-1"></i> Bares </a>             
+            <a nav-transition="none" href="#/app/hoteles-destacados"  class="tab-item" style="color: #fff;"> <i class="icon icono-hotel-blanco"></i> Hoteles </a> </div>  
+             </div>
+<!-- ng-click="blinds();" -->
+
+ <div class="button-bar color-boton-destacados"> 
+ <a nav-transition="none" href="#/app/bares-destacados" class="button color-boton-destacados active" ng-click="blinds();">DESTACADOS</a> 
+ <a nav-transition="none" href="#/app/bares-todos" class="button color-boton-destacados" ng-click="blinds();">TODOS</a>
+
+ </div>
+
+ <div class="destacados">       
+ 	<div class="list condensed-space no-padding done done done done">
+      <div class="card dark-bg in" style="-webkit-transition: 0.13s; transition: 0.13s;" ng-repeat="category in get_bares" item="space">
+          <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse"
+          ui-sref="app.establecimientos({ 
+          categoryId: category.id, 
+          categoryTitle: category.nombre,
+          categoryLogo: category.avatar,
+          categoryFondo: category.portada,          
+          categoryEtiquetas: category.etiquetas,
+          categoryDescripcion: category.descripcion,
+          categoryUbicacion: category.ubicacion,
+          categoryLatitud: category.latutid,
+          categoryLongitud: category.longitud })">  
+             
+              <img src="img/fondos/fondo-bares-1.png">
+               <div class="estilo-logo">
+              <img src="{category.avatar}">
+
+              </div>
+               <span class="estilo-titulo">{{category.nombre}}</span>
+              <span class="estilo-etiquetas">{{category.etiquetas}}</span>
+              <rating id="rating" ng-model="category.reviews" max="rating.max"></rating>
+              <!--<ionic-ratings class="calificaciones banner_right" ratingsobj='ratingsObject' rating='category.reviews' index="$index" ></ionic-ratings>-->
+          </a>
+      </div>
+  </div>  
+</div>
+
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

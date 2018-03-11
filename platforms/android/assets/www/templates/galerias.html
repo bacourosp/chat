@@ -1,0 +1,31 @@
+<ion-view>
+
+     <ion-content  class="has-header fondo-img" scroll="true" padding="true">
+<ion-slide-box does-continue="true" slide-interval="1000" on-slide-changed="slideChanged($event)">
+          <ion-slide id="slide_fotos" pager="true" ng-repeat="tutorial in fotos_galerias">  
+             <img ng-src="{{tutorial.image}}" style="width: 100%">
+            </ion-slide>   
+        </ion-slide-box>  
+  </ion-content>
+      </ion-view>
+       <!-- <ion-slide-box> class="img_galeria"     <div class="destacados"> 
+
+
+                <ion-slide ng-repeat="tutorial in fotos_galerias">
+                        <img ng-src={{tutorial.image}}> 
+
+                </ion-slide>
+
+         </ion-slide-box>
+    </ion-content>
+<ion-content class="fondo-img">
+
+ 
+ 
+ <ion-slide-box  does-continue="true" slide-interval="1000" on-slide-changed="slideChanged(index)">
+     <ion-slide ng-repeat="tutorial in fotos_galerias" >
+           <center>
+            <img ng-src="{{tutorial.image}}" class="img-resp" >
+         </center> probando
+       </ion-slide>
+   </ion-slide-box>-->

@@ -1,0 +1,33 @@
+{
+   "title":"Tutorial",
+   "galeria":[
+      {
+         "id_img":"1",
+         "title_img":"Bar",
+         "description_img":"1ra. Transv., con 1ra. Av., Los Palos Grandes, Caracas",
+         "image":"img/tutorial/Step1.png",
+         "url":"#"
+      },
+      {
+         "id_img":"2",
+         "title_img":"",
+         "description_img":"Av. Principal de Las Mercedes, entre Calle Monterey y Mucuchies, Qta. Diana, Caracas.",
+         "image":"img/tutorial/Step2.png",
+         "url":"#"
+      },
+      {
+         "id_img":"3",
+         "title_img":"Bar",
+         "description_img":"Entre Calle 1 y 2, C.C. Inecom, La Urbina, Caracas.",
+         "image":"img/tutorial/Step3.png",
+         "url":"http://rss.cnn.com/rss/cnn_world.rss"
+      },
+      {
+         "id_img":"4",
+         "title_img":"",
+         "description_img":"Centro Simón Bolívar, Nivel Sótano, Pasaje Rio Catatumbo, Santa Teresa, Caracas",
+         "image":"img/tutorial/Step4.png",
+         "url":"http://www.theguardian.com/world/rss"
+      }
+   ]
+}

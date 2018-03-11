@@ -1,0 +1,58 @@
+<ion-view view-title="A dónde ir" hide-back-button="true">
+<ion-nav-bar class="bar-assertive" align-title="center">
+        <ion-nav-back-button>
+        <i class="icon ion-ios-arrow-back"></i>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color: #336699;"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-search" id="menu-popover" ng-click="popover.show($event)" style="color: #336699;"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+    <ion-content class="fondo-img">
+ 
+        <div class="bar bar-subheader bar-stable static text-center">
+            <div class="tabs tabs-striped tabs-royal tabs-icon-left"> 
+            <a nav-transition="none" href="#/app/boliches"  class="tab-item"> <i class="icon icono-boliche"></i> Boliches </a> 
+            <a nav-transition="none" href="#/app/bares-todos"  class="tab-item active"> <i class="icon icono-bares-1"></i> Bares </a>             
+            <a nav-transition="none" href="#/app/hoteles-destacados"  class="tab-item "> <i class="icon icono-hotel-blanco"></i> Hoteles </a> </div>  
+             </div>
+ <div class="button-bar color-boton-destacados"> 
+ <a nav-transition="none" href="#/app/bares-destacados" class="button color-boton-destacados" ng-click="blinds();">DESTACADOS</a> 
+ <a nav-transition="none" href="#/app/bares-todos" class="button color-boton-destacados active" ng-click="blinds();">TODOS</a>
+
+ </div>
+<div class="destacados">
+<ion-list>
+            <ion-item class="item item-thumbnail-left waves-effect" ng-repeat="category in feeds_categories" ng-click="blinds();" ui-sref="app.establecimientos({ 
+          categoryId: category.id, 
+          categoryTitle: category.title,
+          categoryLogo: category.logo,
+          categoryFondo: category.fondo,          
+          categoryEtiquetas: category.etiquetas,
+          categoryDescripcion: category.descripcion,
+          categoryUbicacion: category.ubicacion,
+          categoryLatitud: category.latutid,
+          categoryLongitud: category.longitud   })">
+              <img ng-src="{{category.logo}}">
+              <h2>{{category.title}}</h2>
+              <p>{{category.etiquetas}}</p>
+              <i class="icon ion-arrow-right-c"></i>
+             <div class="divider"></div>
+
+            </ion-item>           
+
+</ion-list>
+</div>
+
+        <br />
+        <br />
+
+    
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

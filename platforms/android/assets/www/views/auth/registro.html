@@ -1,0 +1,50 @@
+<ion-view hide-nav-bar="true" class="registro-titulo" cache-view="false">
+  <ion-content class="fondo_Layer_7">
+
+       <div class="top-content row"> 
+      
+           <div class="row">
+           <i id="botonBack" class="ion-ios-arrow-back" ui-sref="preregistro()"></i>
+                <div class="col">                   
+                    
+                     <div id="circulo_borde">
+                      <img 
+                      class="avatar_registro" 
+                      ng-src="{{pathForImage(image)}}" 
+                      ng-click="loadImage()">
+                       </div>                        
+                 
+             </div>
+            </div>
+      </div>
+           
+<!-- FORM ============================================================== -->
+    <!-- =================================================================== -->
+    
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+            <ion-md-input ng-click="loadSexo();ocultarTeclado()" ng-class="{ 'has-error' : userForm.genero.$invalid}" class="item_input color_input" id="genero" name="genero" label="Sexo" placeholder="Sexo" hightlight-color="dark"  ng-model="genero.value" required></ion-md-input>
+
+            <ion-md-input class="item_input color_input" id="fecha" name="fecha" label="Fecha" placeholder="Fecha de Naciomiento" hightlight-color="energized" type="date" ng-model="fecha.value" pattern="dd/MM/YYYY"></ion-md-input>
+            
+                         
+          </br></br></br><div id="stilo-boton-continuar">
+      <center>
+      <span class="mi-cuenta">Al Registrarme acepto los terminos y Condiciones de BA Night.</span>
+  <center><button id="stilo-boton-continuar-color" class="login button button-block button-stable" ng-click="CrearUser()">Completar registro</button></center>
+         <br>
+        <span class="mi-cuenta">Paso 2 de 2</span></center>
+        
+         </div>       
+        </form>
+
+
+
+
+<!--Footer-->
+       
+      
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,75 @@
+Aspectos Generales:
+1) Reservaciones (100%) (Hora) escribir un codigo para darle el siguientes formato 2017-12-24 00:00:00 *******************
+
+2) REVIEWS (90%) (necesita pasar el Id Usuario y IdEstablecimiento) (avatar del usuario que realizo el comentario y Numero total de calificaciones realizadas por usuario (basados en tanto))
+
+3) re-establecer contraseña a travez de email (Vista Login) ****************
+
+4) Favoritos (80%)- implementar eliminar favorritos | cambiar fondo
+
+5) Historial (100%)(Cambiar atributo de nombre de usuario por el nombre del establecimiento)
+
+
+7) Registro y login (Validaciones[validar campo de email ] )ManualLogin (Retornar idUser) (80%) recortar centro de la foto que sube el user
+
+8) Eventos *******************implementar eventos
+
+9) Menu opciones (80%) (Restaurar Contaseña y Cambiar Avatar)  Opciones-- implementar cambio foto
+10) integrar iconos de menu y control login
+
+12) Menu y control: Get Datos detallados de Usuario  
+
+
+
+
+
+
+//************UserControl:
+ 	
+ 	
+#GetMailRestartPass( string $MailUser = "es nulo" ) [100%]
+ 	
+ 	
+ 	
+#GetUserId( Illuminate\Http\Request $request, string $Mail = "es nulo" ) ***
+ 	
+#RegistroManual( Illuminate\Http\Request $request ) [100%]
+ 	
+#CambiarFotoPerfil( Illuminate\Http\Request $request ) ***
+ 	
+#CambiarContrasena( Illuminate\Http\Request $request ) ***
+protected boolean	
+#esCorreo( string $mail ) ***
+
+
+//*******************NavigationContrl
+ 
+#GetHistorial( integer $idUser = "es nulo" )[100% implementado]
+ 
+#GetFavoritos( integer $idUser = "es nulo", integer $Rubro = "es nulo" )[100% implementado]
+ 
+#SetFavorito( Illuminate\Http\Request $request )
+ 
+#GetEstablecimiento( integer $idUser = 0, string $idEstablecimiento = 0 ) [100% implementado]
+ 
+#GetEstablecimientos( integer $idUser = 0, string $Rubro = "es nulo", string $Destacado = "TODOS" ) [100%]
+ 
+#GetGeneros( integer $idEstablecimiento = 0 ) [USO INTERNO]
+ 
+#esFavorito( integer $idUser = 0, integer $idEstablecimiento = 0 ) [USO INTERNO]
+
+#Promedio( integer $idEstablecimiento = 0 ) [USO INTERNO]
+ 
+#GetEtiquetas( integer $idEstablecimiento = 0 ) [USO INTERNO]
+
+#GetPromociones( integer $idEstablecimiento = 0 ) [USO INTERNO]
+ 
+#GetDiasPromo( Array $semana = 0 ) 
+ 
+#GetFormasPago( integer $idEstablecimiento = 0 ) [USO INTERNO]
+ 
+#GetRedesSociales( integer $idEstablecimiento = 0 ) [USO INTERNO]
+
+#GetFotosURL( integer $idEstablecimiento = 0 ) [100%]
+
+#FotosEstablecimiento( integer $idEstablecimiento = 0 ) [100%]
